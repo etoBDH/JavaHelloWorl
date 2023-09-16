@@ -5,12 +5,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class WordCRUD implements ICRUD{
+public class WordCRUD implements ICRUD {
     ArrayList<Word> list;
     Scanner s;
     final String fname = "Dictionary.txt";
 
-    WordCRUD(Scanner s){
+    WordCRUD(Scanner s) {
         list = new ArrayList<>();
         this.s = s;
     }
@@ -28,10 +28,11 @@ public class WordCRUD implements ICRUD{
     }
 
     public void addItem() {
-        Word one = (Word)add();
+        Word one = (Word) add();
         list.add(one);
         System.out.println("새 단어가 단어장에 추가되었습니다. ");
     }
+
     @Override
     public int update(Object obj) {
         // TODO Auto-generated method stub
@@ -52,8 +53,8 @@ public class WordCRUD implements ICRUD{
 
     public void listAll() {
         System.out.println("-----------------------------");
-        for(int i = 0; i< list.size(); i++) {
-            System.out.print((i+1) + " ");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print((i + 1) + " ");
             System.out.println(list.get(i).toString());
         }
         System.out.println("-----------------------------");
@@ -64,10 +65,10 @@ public class WordCRUD implements ICRUD{
         ArrayList<Integer> idlist = new ArrayList<>();
         int j = 0;
         System.out.println("-----------------------------");
-        for(int i = 0; i< list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             String word = list.get(i).getWord();
-            if(!word.contains(keyword)) continue;
-            System.out.print((j+1) + " ");
+            if (!word.contains(keyword)) continue;
+            System.out.print((j + 1) + " ");
             System.out.println(list.get(i).toString());
             idlist.add(i);
             j++;
@@ -77,17 +78,18 @@ public class WordCRUD implements ICRUD{
     }
 
 
-        public void listAll(int level){
-            int j= 0;
-            System.out.println("-----------------------------");
-            for(int i = 0; i< list.size(); i++) {
-                int ilevel = list.get(i).getLevel();
-                if (ilevel != level) continue;
-                System.out.print((j + 1) + " ");
-                System.out.println(list.get(i).toString());
-                j++;
-            }
-            }
+    public void listAll(int level) {
+        int j = 0;
+        System.out.println("-----------------------------");
+        for (int i = 0; i < list.size(); i++) {
+            int ilevel = list.get(i).getLevel();
+            if (ilevel != level) continue;
+            System.out.print((j + 1) + " ");
+            System.out.println(list.get(i).toString());
+            j++;
+        }
+    }
+
 
 
 
@@ -171,7 +173,7 @@ public class WordCRUD implements ICRUD{
                 e.printStackTrace();
             }
         }
-
+*/
         public void searchLevel() {
             System.out.print("=> 원하는 레벨은? (1~3) ");
             int level = s.nextInt();
@@ -183,7 +185,7 @@ public class WordCRUD implements ICRUD{
             String keyword = s.next();
             listAll(keyword);
         }
-        */
+
 
 }
 

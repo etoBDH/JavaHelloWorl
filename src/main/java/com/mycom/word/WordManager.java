@@ -38,12 +38,18 @@ public class WordManager {
                 wordCRUD.addItem();
             } else if (menu == 1) {
                 wordCRUD.listAll();
-            } /*
-            else if (menu == 2) {
+            } else if (menu == 2) {
                 wordCRUD.searchLevel();
-            } else if (menu == 3) {
+
+            }
+        }
+    }
+}
+            /*
+            else if (menu == 3) {
                 wordCRUD.searchWord();
-            } else if (menu == 5)
+            }
+            else if (menu == 5)
 
             {
 
@@ -54,11 +60,17 @@ public class WordManager {
             } else if (menu == 7) {
                 wordCRUD.saveFile();
 
-            }*/
+            }
+
+
         }
+
+
 
     }
 
-}
 
+
+}
+*/
 
