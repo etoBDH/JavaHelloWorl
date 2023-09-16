@@ -128,7 +128,7 @@ public class WordCRUD implements ICRUD {
             System.out.println("취소되었습니다. ");
 
     }
-/*
+
     public void loadFile(){
         try{
             BufferedReader br = new BufferedReader(new FileReader(fname));
@@ -158,7 +158,7 @@ public class WordCRUD implements ICRUD {
     }
 
 
-*/
+
 
         public void saveFile() {
             try {
