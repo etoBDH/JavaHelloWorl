@@ -109,7 +109,7 @@ public class WordCRUD implements ICRUD {
         word.setMeaning(meaning);
         System.out.println("단어가 수정되었습니다. ");
     }
-/*
+
 
     public void deleteItem() {
         System.out.print("=> 삭제할 단어 검색 : ");
@@ -128,7 +128,7 @@ public class WordCRUD implements ICRUD {
             System.out.println("취소되었습니다. ");
 
     }
-
+/*
     public void loadFile(){
         try{
             BufferedReader br = new BufferedReader(new FileReader(fname));
